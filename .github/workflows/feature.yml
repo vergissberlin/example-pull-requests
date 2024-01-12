@@ -35,7 +35,6 @@ jobs:
         draft: false
         delete-branch: true
 
-
 #      - name: 💾 Upload artifacts
 #        uses: gavv/pull-request-artifacts@v2
 #        with:
