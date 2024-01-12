@@ -24,15 +24,16 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         title: "${{ github.ref }} - Create pull request"
         body: "This pull request was automatically created by the [create-pull-request](${{ github.actions_url }}/actions/workflows/create-pull-request.yml) GitHub Action."
-        branch: "dirk/${{ github.ref }}"
-        # branch-suffix: "dirk"
+        base: "main"
+        branch: "dirk-is-on-fire"
         labels: "auto-generated"
-        assignees: ${{ github.actor }}
-        reviewers: ${{ github.actor }}
-        team-reviewers: ${{ github.actor }}
-        milestone: "none"
-        draft: false
-        delete-branch: true
+        # branch-suffix: "dirk"
+        # assignees: ${{ github.actor }}
+        # reviewers: ${{ github.actor }}
+        # team-reviewers: ${{ github.actor }}
+        # milestone: "none"
+        # draft: false
+        # delete-branch: true
 
 #      - name: 💾 Upload artifacts
 #        uses: gavv/pull-request-artifacts@v2
