@@ -22,11 +22,11 @@ jobs:
     - uses: peter-evans/create-pull-request@v5
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        title: "${{ github.ref }} - Create pull request"
-        body: "This pull request was automatically created by the [create-pull-request](${{ github.actions_url }}/actions/workflows/create-pull-request.yml) GitHub Action."
+        #title: "${{ github.ref }} - Create pull request"
+        #body: "This pull request was automatically created by the [create-pull-request](${{ github.actions_url }}/actions/workflows/create-pull-request.yml) GitHub Action."
         base: "main"
         branch: "dirk-is-on-fire"
-        labels: "auto-generated"
+        #labels: "auto-generated"
         # branch-suffix: "dirk"
         # assignees: ${{ github.actor }}
         # reviewers: ${{ github.actor }}
