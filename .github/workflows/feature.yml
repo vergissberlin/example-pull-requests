@@ -12,8 +12,6 @@ permissions:
   actions: write
 
 jobs:
-
-  # Job to create a new pull request for the current branch if it does not exist yet
   create_pull_request:
     name: Create Pull Request
     runs-on: ubuntu-latest
