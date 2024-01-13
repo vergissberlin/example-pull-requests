@@ -1,0 +1,29 @@
+name: Download Website
+on:
+  push:
+    branches:
+      - main
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download website
+        run: |
+          wget \
+            --recursive \
+            --level=2 \
+            --wait=1 \
+            --no-clobber \
+            --page-requisites \
+            --html-extension \
+            --convert-links \
+            --domains quotes.toscrape.com \
+            http://quotes.toscrape.com/
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: update local website copy
+          title: Automated Updates to Local Website Copy
+          body: This is an auto-generated PR with website updates.
+          branch: website-updates
